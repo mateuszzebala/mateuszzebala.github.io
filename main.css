@@ -52,6 +52,7 @@ article{
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
+    scroll-behavior: smooth;
 }
 
 .left-side{
@@ -82,13 +83,13 @@ article{
     white-space: nowrap;
 }
 
+
 .link span{
     text-overflow: ellipsis;
 }
 
 .left-side .link:hover, .left-side .link:focus{
-    transform: scale(0.95);
-    outline-width: 5px;
+    transform: scale(0.96);
 }
 
 
@@ -123,6 +124,37 @@ article{
     width: 300px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    box-shadow: 0 0 21px -3px #00000044;
+    
+}
+
+
+.scroll-button{
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    display: none;
+    padding: 10px;
+    font-size: 30px;
+    aspect-ratio: 1/1;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    cursor: pointer;
+    background-color: #eee;
+    border: 5px solid black;
+    border-radius: 15px;
+    transition: outline-width 0.1s;
+    outline: 0 #00000044 solid;
+}
+
+.scroll-button i{
+    transition: transform 0.3s;
+}
+
+.scroll-button:hover, .scroll-button:focus{
+    outline-width: 5px;
 }
 
 @media (max-width: 1000px){
@@ -131,6 +163,7 @@ article{
         overflow: scroll;
         align-items: center;
         justify-content: flex-start;
+        scroll-snap-type: y mandatory;
     }
     article::-webkit-scrollbar{
         width: 0;
@@ -141,6 +174,10 @@ article{
     }
     article > div{
         min-height: 100%;
+        scroll-snap-align: center;
+    }
+    .scroll-button{
+        display: inline-flex;
     }
 
 }
