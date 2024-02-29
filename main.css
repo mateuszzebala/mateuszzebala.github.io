@@ -120,7 +120,7 @@ article{
     text-align: center;
 }
 
-.right-side img{
+.right-side img.me{
     width: 300px;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -179,5 +179,32 @@ article{
     .scroll-button{
         display: inline-flex;
     }
+
+}
+
+
+.technology-icons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.technology-icons img{
+    width: 30px;
+    height: 30px;
+}
+
+.technology-icons div{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -10px black;
 
 }
