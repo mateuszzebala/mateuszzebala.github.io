@@ -20,7 +20,7 @@ main{
 }
 
 main .border{
-    border: 18px dashed black;
+    border: 12px dashed black;
     width: 40%;
     height: 40%;
     position: absolute;
@@ -75,6 +75,7 @@ article{
     text-decoration: none;
     display: flex;
     gap:20px;
+    font-size: 14px;
     align-items: center;
     font-weight: bold;
     transition: 0.2s;
@@ -111,6 +112,7 @@ article{
 .right-side h1{
     font-size: 50px;
     font-weight: 900;
+  
     text-align: center;
 }
 
@@ -131,8 +133,8 @@ article{
 
 .scroll-button{
     position: absolute;
-    bottom: 70px;
-    right: 70px;
+    bottom: 40px;
+    right: 40px;
     display: none;
     padding: 10px;
     font-size: 30px;
@@ -179,6 +181,9 @@ article{
     .scroll-button{
         display: inline-flex;
     }
+    .right-side{
+        width: 100%;
+    }
 
 }
 
@@ -187,7 +192,6 @@ article{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 90%;
     justify-content: center;
     align-items: center;
 }
