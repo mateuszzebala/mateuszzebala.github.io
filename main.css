@@ -20,7 +20,7 @@ main{
 }
 
 main .border{
-    border: 12px dashed black;
+    border: 20px dashed black;
     width: 40%;
     height: 40%;
     position: absolute;
@@ -68,29 +68,31 @@ article{
 .left-side .link{
     padding: 30px;
     width: 100%;    
-    background-color: #DFDFDF;
-    box-shadow: 0 0 21px -3px #00000044;
+    background-color: transparent;
+    box-shadow: 0 0 21px -10px #00000044;
     border-radius: 10px;
     color: black;
     text-decoration: none;
     display: flex;
     gap:20px;
-    font-size: 14px;
+    font-size: 16px;
     align-items: center;
     font-weight: bold;
     transition: 0.2s;
     outline: 0px solid #90909088;
     overflow: hidden;
     white-space: nowrap;
+    outline-width: 4px;
 }
 
 
 .link span{
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .left-side .link:hover, .left-side .link:focus{
-    transform: scale(0.96);
+    outline-width: 10px;
 }
 
 
@@ -127,14 +129,13 @@ article{
     aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 0 0 21px -3px #00000044;
-    
+    cursor: pointer;
 }
-
 
 .scroll-button{
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 10px;
+    right: 10px;
     display: none;
     padding: 10px;
     font-size: 30px;
@@ -190,10 +191,15 @@ article{
 
 .technology-icons{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.technology-icons div:hover{
+    transform: scale(1.2);
+    
 }
 
 .technology-icons img{
@@ -203,12 +209,26 @@ article{
 
 .technology-icons div{
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0 0 20px -10px black;
+    box-shadow: 0 0 20px -15px black;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
 
+@keyframes image-fade-in{
+    from{
+        filter: blur(10px);
+    }
+    to{
+        filter: blur(0px);
+    }
+}
+
+img{
+    animation: image-fade-in 1s ease;
 }
